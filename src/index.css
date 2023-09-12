@@ -74,4 +74,5 @@
     rgba(0, 0, 0, 1) 50%,
     hsl(0, 5%, 0%) 100%
   );
+  background-clip: content-box, border-box;
 }
