@@ -5,21 +5,17 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 function Project() {
   return (
     <>
-      <div className="relative mx-auto max-w-6xl px-16 py-8 overflow-hidden mb-24 rounded-lg">
-        <div className="mr-auto w-2/3 max-w-md text-left text-neutral-50">
-          <div className="flex gap-x-4 mb-12">
-            <a href="#">
-              <FontAwesomeIcon
-                icon={faGithub}
-                className="text-4xl text-neutral-50 bg-teal-600 rounded-full p-2"
-              />
-            </a>
-            <a href="#">
-              <FontAwesomeIcon
-                icon={faLink}
-                className="text-4xl text-neutral-50 bg-teal-600 rounded-full p-2"
-              />
-            </a>
+      <div className="relative mx-auto bg-zinc-900 max-w-6xl px-16 py-8 overflow-hidden mb-24 rounded-lg">
+        <div className="mr-auto max-w-md text-left text-neutral-50">
+          <div className="flex items-center"></div>
+          <div className="flex gap-x-4 mb-12 items-center">
+            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
+              GitHub
+            </h3>
+            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
+              Website
+            </h3>
+            <span className="flex-grow bg-teal-100 inline-block h-1 align-middle"></span>
           </div>
           <h1 className="text-6xl font-extrabold tracking-wide text-neutral-50">
             Ecommerce
@@ -30,16 +26,17 @@ function Project() {
             iste voluptates, rerum soluta consequuntur in nisi aut modi dolorem
             sunt.
           </p>
-          <div className="mt-12 flex text-xl font-extrabold tracking-wide gap-x-4">
-            <p className="text-neutral-50 bg-teal-600 px-2   rounded-md  tracking-wider">
+          <div className="flex gap-x-4 mt-12 items-center">
+            <span className="flex-grow bg-teal-100 inline-block h-1 align-middle"></span>
+            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
               REACT
-            </p>{" "}
-            <p className="text-neutral-50 bg-teal-600 px-2  rounded-md  tracking-wider">
+            </h3>
+            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
               JAVASCRIPT
-            </p>{" "}
-            <p className="text-neutral-50 bg-teal-600 px-2  rounded-md tracking-wider">
+            </h3>
+            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
               VITE
-            </p>
+            </h3>
           </div>
         </div>
         <img

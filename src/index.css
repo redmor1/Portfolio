@@ -69,10 +69,9 @@
 
 #root {
   background: radial-gradient(
-    circle at 50% -75%,
+    circle at 50% -35%,
     #398461 0%,
-    rgba(0, 0, 0, 1) 50%,
-    hsl(0, 5%, 0%) 100%
+    hsl(240, 10%, 5%) 50%
   );
   background-clip: content-box, border-box;
 }

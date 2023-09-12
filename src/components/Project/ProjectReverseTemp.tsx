@@ -5,39 +5,38 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 function ProjectReverseTemp() {
   return (
     <>
-      <div className="relative mx-auto max-w-5xl bg-neutral-950 px-16 py-8 overflow-hidden mb-24 rounded-sm">
-        <div className="ml-auto w-2/3 max-w-md text-left text-neutral-50">
-          <div className="flex flex-row-reverse gap-x-4 mb-12">
-            <a href="#">
-              <FontAwesomeIcon
-                icon={faGithub}
-                className="text-4xl text-neutral-150 bg-teal-600 rounded-md py-1 px-2"
-              />
-            </a>
-            <a href="#">
-              <FontAwesomeIcon
-                icon={faLink}
-                className="text-4xl text-neutral-150 bg-teal-600 rounded-md py-1 px-2"
-              />
-            </a>
+      <div className="relative mx-auto bg-zinc-900 max-w-6xl px-16 py-8 overflow-hidden mb-24 rounded-lg">
+        <div className="ml-auto max-w-md text-left text-neutral-50">
+          <div className="flex items-center"></div>
+          <div className="flex gap-x-4 mb-12 items-center">
+            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
+              GitHub
+            </h3>
+            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
+              Website
+            </h3>
+            <span className="flex-grow bg-teal-100 inline-block h-1 align-middle"></span>
           </div>
-          <h1 className="text-6xl font-extrabold tracking-wide">E-COMMERCE</h1>
+          <h1 className="text-6xl font-extrabold tracking-wide text-neutral-50">
+            Ecommerce
+          </h1>
           <p className="mt-4 text-neutral-400 tracking-tight">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
             aliquam. Animi esse, harum veritatis quia blanditiis id atque neque
             iste voluptates, rerum soluta consequuntur in nisi aut modi dolorem
             sunt.
           </p>
-          <div className="mt-12 flex text-xl font-extrabold tracking-wide gap-x-4">
-            <p className="text-neutral-150 border-2 border-teal-700 px-2 bg-teal-700 text-neutral-150 rounded-md font-display tracking-wider">
+          <div className="flex gap-x-4 mt-12 items-center">
+            <span className="flex-grow bg-teal-100 inline-block h-1 align-middle"></span>
+            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
               REACT
-            </p>{" "}
-            <p className="text-neutral-150 border-2 border-teal-700 px-2 bg-teal-700 text-neutral-150  rounded-md font-display tracking-wider">
+            </h3>
+            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
               JAVASCRIPT
-            </p>{" "}
-            <p className="text-neutral-150 border-2 border-teal-700 px-2 bg-teal-700 text-neutral-150  rounded-md font-display tracking-wider">
+            </h3>
+            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
               VITE
-            </p>
+            </h3>
           </div>
         </div>
         <img
