@@ -8,7 +8,7 @@ function ProjectReverseTemp() {
       <div className="relative mx-auto bg-zinc-900 max-w-6xl px-16 py-8 overflow-hidden mb-24 rounded-lg">
         <div className="ml-auto max-w-md text-left text-neutral-50">
           <div className="flex items-center"></div>
-          <div className="flex gap-x-4 mb-12 items-center">
+          <div className="flex flex-row-reverse gap-x-4 mb-12 items-center">
             <a
               href="#"
               className="text-teal-100 border-2 border-teal-100 px-3 py-1.5 rounded-lg text-xl font-bold underline-offset-2 font-display tracking-wider"
@@ -23,7 +23,7 @@ function ProjectReverseTemp() {
             </a>
             <span className="flex-grow bg-teal-100 inline-block h-1 align-middle"></span>
           </div>
-          <h1 className="text-6xl font-extrabold tracking-wide text-neutral-50">
+          <h1 className="text-6xl mb-6 font-extrabold tracking-wide text-neutral-50">
             Ecommerce
           </h1>
           <p className="mt-4 text-neutral-400 tracking-tight">
@@ -32,7 +32,7 @@ function ProjectReverseTemp() {
             iste voluptates, rerum soluta consequuntur in nisi aut modi dolorem
             sunt.
           </p>
-          <div className="flex gap-x-4 mt-12 items-center">
+          <div className="flex flex-row-reverse gap-x-4 mt-12 items-center">
             <span className="flex-grow bg-teal-100 inline-block h-1 align-middle"></span>
             <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
               REACT

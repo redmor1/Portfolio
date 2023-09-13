@@ -45,10 +45,12 @@ function Project() {
             </h3>
           </div>
         </div>
-        <img
-          className="absolute right-0 top-12 w-[28rem] rounded-xl shadow-[-8.0px_-1.0px_8.0px_rgba(0,0,0,0.38)]"
-          src="https://portfolio-website-q3qoosn22-bytegrad.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcorpcomment.3895cd42.png&w=750&q=95"
-        ></img>
+        <a href="#">
+          <img
+            className="absolute right-0 top-12 w-[28rem] rounded-xl shadow-[-8.0px_-1.0px_8.0px_rgba(0,0,0,0.38)]"
+            src="https://portfolio-website-q3qoosn22-bytegrad.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcorpcomment.3895cd42.png&w=750&q=95"
+          ></img>
+        </a>
       </div>
     </>
   );
