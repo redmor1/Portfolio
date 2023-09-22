@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import scrollToElement from "../../functions/scrollToElement";
 
 function Navbar() {
   return (
@@ -50,6 +51,9 @@ function Navbar() {
             hover:before:w-full
             hover:before:opacity-100
 "
+          onClick={() => {
+            scrollToElement("projects");
+          }}
         >
           Projects
         </a>
@@ -69,6 +73,9 @@ function Navbar() {
             before:bg-teal-500
             hover:before:w-full
             hover:before:opacity-100"
+          onClick={() => {
+            scrollToElement("contact");
+          }}
         >
           Contact
         </a>
