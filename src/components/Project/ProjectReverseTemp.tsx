@@ -32,7 +32,7 @@ function ProjectReverseTemp() {
             iste voluptates, rerum soluta consequuntur in nisi aut modi dolorem
             sunt.
           </p>
-          <div className="flex flex-row-reverse gap-x-4 mt-12 items-center">
+          <div className="flex gap-x-4 mt-12 items-center">
             <span className="flex-grow bg-teal-100 inline-block h-1 align-middle"></span>
             <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
               REACT

@@ -12,7 +12,7 @@ function App() {
         <div>
           <a
             href="#"
-            className="font-display hover:bg-teal-600 hover:text-zinc-100 text-zinc-100 text-2xl border-teal-600 border-4 rounded-md px-2 py-1 block transition-colors ease-in-out duration-200"
+            className="font-display hover:bg-teal-600   text-zinc-100 text-2xl border-teal-600 border-4 rounded-md px-2 py-1 block transition-colors ease-linear duration-200"
           >
             VIEW RESUME
           </a>
@@ -113,6 +113,60 @@ function App() {
         <ProjectReverseTemp />
         <Project />
       </section>
+      <section className="max-w-5xl mx-auto">
+        <h1 className="text-zinc-100 text-7xl font-bold text-center my-12 font-display">
+          About me
+        </h1>
+        <div className="flex justify-between text-zinc-300">
+          <div className="max-w-xl">
+            <p className="mb-2">
+              What to tell you about myself? I have a background in e-sports
+              competition, so i'm no stranger to teamwork, good communication
+              and do-or-die moments.
+            </p>
+            <p className="mb-2">
+              I was introduced to programming by a bootcamp called
+              "Informatorio" where you are taught the basics from a practical
+              job-ready stance.
+            </p>
+            <p className="mb-2">
+              Since then i've been striving to be as complete as possible as a
+              developer, going from Frontend to Backend, peppering some Testing,
+              UI and UX to get a clearer picture of the ecosystem and improve my
+              skills.
+            </p>
+            <p className="mb-2">
+              I'm a usual frequenter of dev communities such as
+              /r/ExperiencedDevs, /r/cscareerquestions, etc... what better way
+              to improve as a developer and make less mistakes than read the
+              thoughts/tips/experiences of developers with years of experience?
+            </p>
+            <p className="mb-2">
+              In 2024, I plan to enroll into university to earn an associate's
+              degree in programming, this will deepen my understanding of
+              mathematics and programming, particularly the inner working of
+              systems. Meanwhile, I'll keep honing my skills through personal
+              projects.
+            </p>
+          </div>
+          <div>
+            <h1 className="text-zinc-100 font-bold text-xl font-display">
+              Frontend
+            </h1>
+            <p>JavaScript, TypeScript, React, Vite, Bootstrap, Tailwind</p>
+            <h1 className="text-zinc-100 font-bold text-xl mt-5 font-display">
+              Backend
+            </h1>
+            <p>Java, Python, Spring Boot, Django</p>
+          </div>
+        </div>
+      </section>{" "}
+      <a
+        href="mailto:matiaszaratedeveloper@gmail.com"
+        className="block text-zinc-50 font-bold font-display text-9xl bg-teal-950 py-8 mt-12 px-16 rounded-lg text-center max-w-6xl mx-auto"
+      >
+        Wanna talk?
+      </a>
     </main>
   );
 }

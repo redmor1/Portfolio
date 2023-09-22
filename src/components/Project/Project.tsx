@@ -8,22 +8,27 @@ function Project() {
       <div className="relative mx-auto bg-zinc-900 max-w-6xl px-16 py-8 overflow-hidden mb-24 rounded-lg">
         <div className="mr-auto max-w-md text-left text-neutral-50">
           <div className="flex items-center"></div>
-          <div className="flex gap-x-4 mb-12 items-center">
+          <div className="flex gap-x-4 mb-10 items-center">
             <a
               href="#"
-              className="text-teal-100 border-2 border-teal-100 px-3 py-1.5 rounded-lg text-xl font-bold underline-offset-2 font-display tracking-wider"
+              className="text-zinc-100 hover:bg-zinc-100 hover:border-zinc-100 hover:text-teal-950 bg-teal-950 border-2 border-teal-950 py-0.5 px-1.5 rounded-xl font-bold underline-offset-2 font-display tracking-wider"
             >
-              GitHub
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="text-4xl"
+              ></FontAwesomeIcon>
             </a>
             <a
               href="#"
-              className="text-teal-100 border-2 border-teal-100 px-3 py-1.5 rounded-lg text-xl font-bold underline-offset-2 font-display tracking-wider"
+              className="text-zinc-100 hover:bg-zinc-100 hover:border-zinc-100 hover:text-teal-950 bg-teal-950 border-2 border-teal-950 py-0.5 px-0.5 rounded-xl  font-bold underline-offset-2 font-display tracking-wider"
             >
-              Website
+              <FontAwesomeIcon
+                icon={faLink}
+                className="text-4xl"
+              ></FontAwesomeIcon>
             </a>
-            <span className="flex-grow bg-teal-100 inline-block h-1 align-middle"></span>
           </div>
-          <h1 className="text-6xl mb-6 font-extrabold tracking-wide text-neutral-50">
+          <h1 className="text-6xl mb-4 font-extrabold tracking-wide text-neutral-50">
             Ecommerce
           </h1>
           <p className="mt-4 text-zinc-400 tracking-tight">
@@ -32,16 +37,15 @@ function Project() {
             iste voluptates, rerum soluta consequuntur in nisi aut modi dolorem
             sunt.
           </p>
-          <div className="flex gap-x-4 mt-12 items-center">
-            <span className="flex-grow bg-teal-100 inline-block h-1 align-middle"></span>
-            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
-              REACT
+          <div className="flex gap-x-4 mt-10 items-center">
+            <h3 className="text-teal-700 text-xl font-display uppercase tracking-wide">
+              React
             </h3>
-            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
-              JAVASCRIPT
+            <h3 className="text-teal-700 text-xl font-display uppercase tracking-wide">
+              Javascript
             </h3>
-            <h3 className="text-teal-100 text-xl font-bold underline-offset-2 font-display tracking-wider">
-              VITE
+            <h3 className="text-teal-700 text-xl font-display uppercase tracking-wide">
+              Vite
             </h3>
           </div>
         </div>
