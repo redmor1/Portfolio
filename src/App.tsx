@@ -2,6 +2,7 @@ import "./App.css";
 import Project from "./components/Project/Project";
 import ProjectReverseTemp from "./components/Project/ProjectReverseTemp";
 import Navbar from "./components/Navbar/Navbar";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -93,14 +94,7 @@ function App() {
           </div>
         </div>
       </section>
-      <div className="flex justify-center">
-        <a
-          href="mailto:matiaszaratedeveloper@gmail.com"
-          className="inline-block text-zinc-50 font-bold font-display text-9xl bg-teal-950 py-8 mt-12 px-16 rounded-lg text-center max-w-6xl mx-auto mb-16"
-        >
-          Wanna talk?
-        </a>
-      </div>
+      <Contact />
     </main>
   );
 }
