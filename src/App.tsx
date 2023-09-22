@@ -7,7 +7,7 @@ import ProjectReverseTemp from "./components/Project/ProjectReverseTemp";
 
 function App() {
   return (
-    <main className="h-min-[100vh] bg-[url('../public/noise.svg')] font-normal px-8">
+    <main className="bg-[url('../public/noise.svg')] font-normal px-8">
       <nav className="flex justify-between max-w-6xl mx-auto mb-36 pt-16">
         <div>
           <a
@@ -96,9 +96,10 @@ function App() {
             Full Stack Developer from Argentina
           </h1>
           <p className="text-zinc-400 mb-8 mt-4 text-md font-normal">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-            repellendus corrupti? Vero, exercitationem? Placeat earum temporibus
-            sed? Iure, saepe autem tempore earum incidunt.
+            Welcome! Leveraging a unique blend of competitive e-sports and
+            programming, I’m all about teamwork, communication, and technical
+            prowess. Passionate about crafting efficient, user-friendly web
+            solutions. Dive in to explore my journey in web development.
           </p>
         </div>
       </section>
@@ -113,18 +114,18 @@ function App() {
         <ProjectReverseTemp />
         <Project />
       </section>
-      <section className="max-w-5xl mx-auto">
-        <h1 className="text-zinc-100 text-7xl font-bold text-center my-12 font-display">
+      <section className="max-w-5xl mx-auto mb-12">
+        <h1 className="text-zinc-50 text-7xl font-bold text-center my-12 font-display tracking">
           About me
         </h1>
         <div className="flex justify-between text-zinc-300">
-          <div className="max-w-xl">
-            <p className="mb-2">
+          <div className="max-w-xl text-lg leading-7">
+            <p className="mb-2 border-b-zinc-700 border-b-4 pb-4">
               What to tell you about myself? I have a background in e-sports
               competition, so i'm no stranger to teamwork, good communication
               and do-or-die moments.
             </p>
-            <p className="mb-2">
+            <p className="mb-2 ">
               I was introduced to programming by a bootcamp called
               "Informatorio" where you are taught the basics from a practical
               job-ready stance.
@@ -135,7 +136,7 @@ function App() {
               UI and UX to get a clearer picture of the ecosystem and improve my
               skills.
             </p>
-            <p className="mb-2">
+            <p className="mb-2 border-b-zinc-700 border-b-4 pb-4">
               I'm a usual frequenter of dev communities such as
               /r/ExperiencedDevs, /r/cscareerquestions, etc... what better way
               to improve as a developer and make less mistakes than read the
@@ -150,23 +151,27 @@ function App() {
             </p>
           </div>
           <div>
-            <h1 className="text-zinc-100 font-bold text-xl font-display">
+            <h1 className="text-zinc-200 font-bold text-3xl font-display">
               Frontend
             </h1>
-            <p>JavaScript, TypeScript, React, Vite, Bootstrap, Tailwind</p>
-            <h1 className="text-zinc-100 font-bold text-xl mt-5 font-display">
+            <p className="text-zinc-400">
+              JavaScript, TypeScript, React, Vite, Bootstrap, Tailwind
+            </p>
+            <h1 className="text-zinc-200 font-bold text-3xl mt-5 font-display">
               Backend
             </h1>
-            <p>Java, Python, Spring Boot, Django</p>
+            <p className="text-zinc-400">Java, Python, Spring Boot, Django</p>
           </div>
         </div>
-      </section>{" "}
-      <a
-        href="mailto:matiaszaratedeveloper@gmail.com"
-        className="block text-zinc-50 font-bold font-display text-9xl bg-teal-950 py-8 mt-12 px-16 rounded-lg text-center max-w-6xl mx-auto"
-      >
-        Wanna talk?
-      </a>
+      </section>
+      <div className="flex justify-center">
+        <a
+          href="mailto:matiaszaratedeveloper@gmail.com"
+          className="inline-block text-zinc-50 font-bold font-display text-9xl bg-teal-950 py-8 mt-12 px-16 rounded-lg text-center max-w-6xl mx-auto mb-16"
+        >
+          Wanna talk?
+        </a>
+      </div>
     </main>
   );
 }
