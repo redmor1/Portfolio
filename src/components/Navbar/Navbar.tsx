@@ -5,16 +5,16 @@ import scrollToElement from "../../functions/scrollToElement";
 
 function Navbar() {
   return (
-    <nav className="flex justify-between max-w-6xl mx-auto mb-36 pt-16">
-      <div>
+    <nav className="xs:flex justify-between max-w-6xl mx-auto mb-36 xs:pt-16 pt-8">
+      <div className="xs:mb-0 mb-6 flex justify-center">
         <a
           href="#"
-          className="font-display hover:bg-teal-600   text-zinc-100 text-2xl border-teal-600 border-4 rounded-md px-2 py-1 block transition-colors ease-linear duration-200"
+          className="font-display hover:bg-teal-600   text-zinc-100 text-2xl border-teal-600 border-4 rounded-md px-2 py-1 xs:block transition-colors ease-linear duration-200"
         >
           VIEW RESUME
         </a>
       </div>
-      <div className="flex justify-between w-72 max-w-xl items-center">
+      <div className="flex justify-between xs:mx-0 mx-auto w-72 max-w-xl items-center">
         <a
           href="https://github.com/redmor1"
           className="hover:bg-teal-600 text-zinc-100 p-1 rounded-xl transition-colors ease-in-out duration-200"

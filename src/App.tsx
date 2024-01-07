@@ -6,11 +6,11 @@ import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-    <main className="bg-[url('../public/noise.svg')] font-normal px-8">
+    <main className="bg-[url('../public/noise.svg')] font-normal px-4 xs:px-8">
       <Navbar />
-      <section className="mx-auto h-[75vh] max-w-7xl mb-24 text-center border-b-4 border-teal-950">
+      <section className="mx-auto h-[75vh] max-w-6xl mb-24 text-center border-b-4 border-teal-950">
         <div className="max-w-xl mx-auto">
-          <h1 className="font-display text-center font-bold w-full text-[10rem] leading-[8rem] text-zinc-50 drop-shadow-2xl mb-8">
+          <h1 className="font-display text-center font-bold w-full text-[7rem] xs:text-[8rem] sm:text-[10rem] sm:leading-[8rem] xs:leading-[8rem] leading-[6rem]  text-zinc-50 drop-shadow-2xl mb-8 ">
             Matias Zarate
           </h1>
           <div className="flex items-center justify-center mb-6">
@@ -41,15 +41,15 @@ function App() {
           Projects
         </h1> */}
         <Project />
-        <ProjectReverseTemp />
+        <Project />
         <Project />
       </section>
       <section className="max-w-5xl mx-auto mb-12">
         <h1 className="text-zinc-50 text-7xl font-bold text-center my-12 font-display tracking">
           About me
         </h1>
-        <div className="flex justify-between text-zinc-300">
-          <div className="max-w-xl text-lg leading-7">
+        <div className="flex flex-col items-center justify-between text-zinc-300">
+          <div className="max-w-xl text-lg leading-7 mb-12">
             <p className="mb-2 border-b-zinc-700 border-b-4 pb-4">
               What to tell you about myself? I have a background in e-sports
               competition, so i'm no stranger to teamwork, good communication
@@ -80,17 +80,21 @@ function App() {
               projects.
             </p>
           </div>
-          <div>
-            <h1 className="text-zinc-200 font-bold text-3xl font-display">
-              Frontend
-            </h1>
-            <p className="text-zinc-400">
-              JavaScript, TypeScript, React, Vite, Bootstrap, Tailwind
-            </p>
-            <h1 className="text-zinc-200 font-bold text-3xl mt-5 font-display">
-              Backend
-            </h1>
-            <p className="text-zinc-400">Java, Python, Spring Boot, Django</p>
+          <div className="items-start flex justify-between max-w-xl w-full">
+            <div className="max-w-[10rem] xs:max-w-xs">
+              <h1 className="text-zinc-200 font-bold text-3xl font-display">
+                Frontend
+              </h1>
+              <p className="text-zinc-400">
+                JavaScript, TypeScript, React, Vite, Bootstrap, Tailwind
+              </p>
+            </div>
+            <div className="max-w-[10rem] xs:max-w-xs">
+              <h1 className="text-zinc-200 font-bold text-3xl font-display">
+                Backend
+              </h1>
+              <p className="text-zinc-400">Java, Python, Spring Boot, Django</p>
+            </div>
           </div>
         </div>
       </section>
