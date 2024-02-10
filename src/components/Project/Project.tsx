@@ -50,8 +50,8 @@ function Project() {
         </div>
         <a href="#">
           <img
-            className="z-0 absolute right-0 sm:top-80 md:top-64 lg:top-12 w-[47.5vw] lg:w-[28rem] rounded-xl shadow-[-8.0px_-1.0px_8.0px_rgba(0,0,0,0.38)]"
-            src="https://portfolio-website-q3qoosn22-bytegrad.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcorpcomment.3895cd42.png&w=750&q=95"
+            className="z-0 absolute right-0 sm:top-80 md:top-80 lg:top-12 w-[47.5vw] lg:w-[28rem] rounded-xl shadow-[-8.0px_-1.0px_8.0px_rgba(0,0,0,0.38)]"
+            src="/BrewersCookbook.webp"
           ></img>
         </a>
       </div>

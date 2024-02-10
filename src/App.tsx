@@ -1,12 +1,11 @@
 import "./App.css";
 import Project from "./components/Project/Project";
-import ProjectReverseTemp from "./components/Project/ProjectReverseTemp";
 import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-    <main className="bg-[url('../public/noise.svg')] font-normal px-4 xs:px-8">
+    <main className="bg-[url('/noise.svg')] font-normal px-4 xs:px-8">
       <Navbar />
       <section className="mx-auto h-[75vh] max-w-6xl mb-24 text-center border-b-4 border-teal-950">
         <div className="max-w-xl mx-auto">
