@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import scrollToElement from "../../functions/scrollToElement";
+import scrollToElement from "../../functions/scrollToElement.ts";
 
 function Navbar() {
   return (
