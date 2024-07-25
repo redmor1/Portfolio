@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="xs:flex justify-between max-w-6xl mx-auto mb-36 xs:pt-16 pt-8">
       <div className="xs:mb-0 mb-6 flex justify-center">
         <a
-          href="#"
+          href="https://drive.google.com/file/d/1z8CljwaCVsIDgR2FYhYHRr0-kyCFLKpW/view"
           className="font-display hover:bg-teal-600   text-zinc-100 text-2xl border-teal-600 border-4 rounded-md px-2 py-1 xs:block transition-colors ease-linear duration-200"
         >
           VIEW RESUME

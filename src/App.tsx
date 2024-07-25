@@ -6,6 +6,7 @@ import Contact from "./components/Contact/Contact";
 function App() {
   return (
     <main className="bg-[url('/noise.svg')] font-normal px-4 xs:px-8">
+      <p className="text-white font-bold">Website in progress</p>
       <Navbar />
       <section className="mx-auto h-[75vh] max-w-6xl mb-24 text-center border-b-4 border-teal-950">
         <div className="max-w-xl mx-auto">

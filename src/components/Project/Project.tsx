@@ -27,9 +27,7 @@ function Project() {
               ></FontAwesomeIcon>
             </a>
           </div>
-          <h1 className="text-5xl xs:text-6xl mb-4 font-extrabold tracking-wide text-neutral-50">
-            Ecommerce
-          </h1>
+          <h1 className="text-5xl xs:text-6xl mb-4 font-extrabold tracking-wide text-neutral-50"></h1>
           <p className="mt-4 text-zinc-400 tracking-tight z-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
             aliquam. Animi esse, harum veritatis quia blanditiis id atque neque
