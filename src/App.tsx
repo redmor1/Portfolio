@@ -97,8 +97,7 @@ function App() {
               In 2024, I plan to enroll into university to earn an associate's
               degree in programming, this will deepen my understanding of
               mathematics and programming, particularly the inner working of
-              systems. Meanwhile, I'll keep honing my skills through personal
-              projects.
+              systems.
             </p>
           </div>
           <div className="items-start flex justify-between max-w-xl w-full">
