@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
 
 function App() {
+  const descriptionFiller =
+    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ipsum dolor, quod atque, sed illo placeat possimus ipsa sint dignissimos sapiente provident, nostrum veritatis vel laudantium consectetur quaerat distinctio aliquam?";
+
   return (
     <main className="bg-[url('/noise.svg')] font-normal px-4 xs:px-8">
       <p className="text-white font-bold">Website in progress</p>
@@ -40,9 +43,27 @@ function App() {
         {/* <h1 className="font-display text-zinc-50 text-7xl text-center mb-24">
           Projects
         </h1> */}
-        <Project />
-        <Project />
-        <Project />
+        <Project
+          title="Brewer's Cookbook"
+          description={descriptionFiller}
+          imageUrl="/BrewersCookbook.webp"
+          githubUrl=""
+          projectUrl=""
+        />
+        <Project
+          title="Ticket Bus"
+          description={descriptionFiller}
+          imageUrl="/TicketBus.webp"
+          githubUrl=""
+          projectUrl=""
+        />
+        <Project
+          title="Brewer's Cookbook"
+          description={descriptionFiller}
+          imageUrl="/BrewersCookbook.webp"
+          githubUrl=""
+          projectUrl=""
+        />
       </section>
       <section className="max-w-5xl mx-auto mb-12">
         <h1 className="text-zinc-50 text-7xl font-bold text-center my-12 font-display tracking">
