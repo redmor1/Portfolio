@@ -2,10 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-function Project() {
+function ProjectReverseTemp() {
   return (
     <>
-      <div className="relative mx-auto bg-zinc-900 max-w-6xl xs:px-16 px-8 lg:py-8 pt-8 overflow-hidden mb-24 rounded-lg h-[40rem] lg:h-auto">
+      <div className="relative mx-auto bg-zinc-900 max-w-6xl px-16 lg:py-8 pt-8 overflow-hidden mb-24 rounded-lg h-[40rem] lg:h-auto">
         <div className="relative z-10 mr-auto xl:max-w-md lg:max-w-sm max-w-sm mb-12 lg:mb-0 text-left text-neutral-50">
           <div className="flex gap-x-4 mb-10 items-center">
             <a
@@ -27,7 +27,9 @@ function Project() {
               ></FontAwesomeIcon>
             </a>
           </div>
-          <h1 className="text-5xl xs:text-6xl mb-4 font-extrabold tracking-wide text-neutral-50"></h1>
+          <h1 className="text-6xl mb-4 font-extrabold tracking-wide text-neutral-50">
+            Ecommerce
+          </h1>
           <p className="mt-4 text-zinc-400 tracking-tight z-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
             aliquam. Animi esse, harum veritatis quia blanditiis id atque neque
@@ -48,8 +50,8 @@ function Project() {
         </div>
         <a href="#">
           <img
-            className="z-0 absolute right-0 sm:top-80 md:top-80 lg:top-12 w-[47.5vw] lg:w-[28rem] rounded-xl shadow-[-8.0px_-1.0px_8.0px_rgba(0,0,0,0.38)]"
-            src="/BrewersCookbook.webp"
+            className="z-0 absolute right-0 sm:top-80 md:top-64 lg:top-12 w-[47.5vw] lg:w-[28rem] rounded-xl shadow-[-8.0px_-1.0px_8.0px_rgba(0,0,0,0.38)]"
+            src="https://portfolio-website-q3qoosn22-bytegrad.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcorpcomment.3895cd42.png&w=750&q=95"
           ></img>
         </a>
       </div>
@@ -57,4 +59,4 @@ function Project() {
   );
 }
 
-export default Project;
+export default ProjectReverseTemp;
