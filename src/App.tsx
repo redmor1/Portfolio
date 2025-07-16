@@ -9,7 +9,7 @@ function App() {
     <main className="bg-[url('/noise.svg')] font-normal px-4 xs:px-8">
       <p className="text-white font-bold">Website in progress</p>
       <Navbar />
-      <section className="mx-auto h-[75vh] max-w-6xl mb-24 text-center border-b-4 border-teal-950">
+      <section className="mx-auto min-h-[75vh] max-w-6xl mb-24 text-center border-b-4 border-teal-950 py-8">
         <div className="max-w-xl mx-auto">
           <h1 className="font-display text-center font-bold w-full text-[7rem] xs:text-[8rem] sm:text-[10rem] sm:leading-[8rem] xs:leading-[8rem] leading-[6rem]  text-zinc-50 drop-shadow-2xl mb-8 ">
             Matias Zarate
@@ -38,7 +38,7 @@ function App() {
         id="projects"
         className="border-b-4 border-teal-950 max-w-6xl mx-auto"
       >
-        <h1 className="font-display text-zinc-50 text-7xl text-center mb-24">
+        <h1 className="font-display text-zinc-50 text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center mb-24">
           Projects
         </h1>
         <Project
@@ -92,7 +92,7 @@ function App() {
         />
       </section>
       <section className="max-w-5xl mx-auto mb-12">
-        <h1 className="text-zinc-50 text-7xl font-bold text-center my-12 font-display tracking">
+        <h1 className="text-zinc-50 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center my-12 font-display tracking">
           About me
         </h1>
         <div className="flex flex-col items-center justify-between text-zinc-300">
