@@ -5,7 +5,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 function ProjectReverseTemp() {
   return (
     <>
-      <div className="relative mx-auto bg-zinc-900 max-w-6xl px-16 lg:py-8 pt-8 overflow-hidden mb-24 rounded-lg h-[40rem] lg:h-auto">
+      <div className="relative mx-auto bg-zinc-900 max-w-6xl px-16 lg:py-8 pt-8 overflow-hidden mb-24 rounded-lg h-[40rem] lg:h-auto flex-row-reverse flex">
         <div className="relative z-10 mr-auto xl:max-w-md lg:max-w-sm max-w-sm mb-12 lg:mb-0 text-left text-neutral-50">
           <div className="flex gap-x-4 mb-10 items-center">
             <a

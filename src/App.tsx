@@ -2,6 +2,7 @@ import "./App.css";
 import Project from "./components/Project/Project";
 import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
+import ProjectReverseTemp from "./components/Project/ProjectReverseTemp";
 
 function App() {
   const descriptionFiller =
@@ -26,13 +27,13 @@ function App() {
         <div className="text-left max-w-sm mx-auto">
           <div className="text-left max-w-xl"></div>
           <h1 className="text-zinc-200 italic text-4xl font-bold my-4">
-            Full Stack Developer from Argentina
+            Frontend-focused fullstack developer from Argentina
           </h1>
           <p className="text-zinc-400 mb-8 mt-4 text-md font-normal">
-            Welcome! Leveraging a unique blend of competitive e-sports and
-            programming, I’m all about teamwork, communication, and technical
-            prowess. Passionate about crafting efficient, user-friendly web
-            solutions. Dive in to explore my journey in web development.
+            I've got a solid foundation in building maintainable interfaces,
+            reusable components, and responsive layouts using modern frontend
+            tools. I value teamwork, clear communication, and keeping projects
+            moving through practical, hands-on development.
           </p>
         </div>
       </section>
@@ -40,29 +41,45 @@ function App() {
         id="projects"
         className="border-b-4 border-teal-950 max-w-6xl mx-auto"
       >
-        {/* <h1 className="font-display text-zinc-50 text-7xl text-center mb-24">
+        <h1 className="font-display text-zinc-50 text-7xl text-center mb-24">
           Projects
-        </h1> */}
+        </h1>
         <Project
-          title="Brewer's Cookbook"
-          description={descriptionFiller}
-          imageUrl="/BrewersCookbook.webp"
-          githubUrl=""
-          projectUrl=""
+          logo={
+            <img
+              src="./sentirsebien-logo.png"
+              className="h-36 mt-2"
+              alt="logo"
+            />
+          }
+          description={
+            "Web application for a spa. It allows managing appointment bookings with availability control, service cart, user settings, and an admin panel. Includes authentication, different roles with separate views (client, professional, administrator), and real-time appointment handling logic."
+          }
+          imageUrl="/sentirsebien.webp"
+          githubUrl="https://github.com/redmor1/Spa-SentirseBien"
+          projectUrl="https://spa-sentirse-bien-eta.vercel.app/"
+          tags={[
+            "React",
+            "Vite",
+            "JavaScript",
+            "Tailwind",
+            "Node.js",
+            "Express",
+            "Prisma",
+            "MySQL",
+          ]}
         />
         <Project
-          title="Ticket Bus"
-          description={descriptionFiller}
-          imageUrl="/TicketBus.webp"
-          githubUrl=""
-          projectUrl=""
-        />
-        <Project
-          title="Brewer's Cookbook"
-          description={descriptionFiller}
-          imageUrl="/BrewersCookbook.webp"
-          githubUrl=""
-          projectUrl=""
+          logo={
+            <img src="./eolonotas-logo.png" className="h-40 mt-6" alt="logo" />
+          }
+          description={
+            "Mobile flashcard app inspired by Anki, built with React Native and local SQLite storage. Uses the SM-2 algorithm for efficient spaced repetition. Includes AI-powered card generation via OpenRouter and supports four card types: basic, write, image, and fill-in-the-blanks."
+          }
+          imageUrl="/eolonotas.png"
+          githubUrl="https://github.com/redmor1/eolonotas"
+          projectUrl="https://github.com/redmor1/eolonotas"
+          tags={["React Native", "Expo Go", "TypeScript", "SQLite"]}
         />
       </section>
       <section className="max-w-5xl mx-auto mb-12">
@@ -71,50 +88,24 @@ function App() {
         </h1>
         <div className="flex flex-col items-center justify-between text-zinc-300">
           <div className="max-w-xl text-lg leading-7 mb-12">
-            <p className="mb-2 border-b-zinc-700 border-b-4 pb-4">
-              What to tell you about myself? I have a background in e-sports
-              competition, so i'm no stranger to teamwork, good communication
-              and do-or-die moments.
-            </p>
-            <p className="mb-2 ">
-              I was introduced to programming by a bootcamp called
-              "Informatorio" where you are taught the basics from a practical
-              job-ready stance.
-            </p>
-            <p className="mb-2">
-              Since then i've been striving to be as complete as possible as a
-              developer, going from Frontend to Backend, peppering some Testing,
-              UI and UX to get a clearer picture of the ecosystem and improve my
-              skills.
-            </p>
-            <p className="mb-2 border-b-zinc-700 border-b-4 pb-4">
-              I'm a usual frequenter of dev communities such as
-              /r/ExperiencedDevs, /r/cscareerquestions, etc... what better way
-              to improve as a developer and make less mistakes than read the
-              thoughts/tips/experiences of developers with years of experience?
+            <p className="mb-4 border-b-zinc-700 border-b-4 pb-4">
+              Coming from a background where teamwork, clear communication, and
+              performing under pressure were essential, these values naturally
+              carried over into software development. I started programming at
+              the Informatorio bootcamp, a practical introduction that
+              emphasized real-world problem solving. From there, my focus
+              expanded into fullstack development — learning to build, connect,
+              and test everything from frontend interfaces to backend logic,
+              while also exploring UI/UX to understand how it all fits together.
             </p>
             <p className="mb-2">
-              In 2024, I plan to enroll into university to earn an associate's
-              degree in programming, this will deepen my understanding of
-              mathematics and programming, particularly the inner working of
-              systems.
+              Alongside that, staying active in dev communities and learning
+              from more experienced developers has shaped much of my growth as a
+              developer. I'm now close to finishing an associate's degree in
+              programming, which has strengthened my understanding of core
+              concepts — from logic and data structures to how software behaves
+              under the hood.
             </p>
-          </div>
-          <div className="items-start flex justify-between max-w-xl w-full">
-            <div className="max-w-[10rem] xs:max-w-xs">
-              <h1 className="text-zinc-200 font-bold text-3xl font-display">
-                Frontend
-              </h1>
-              <p className="text-zinc-400">
-                JavaScript, TypeScript, React, Vite, Bootstrap, Tailwind
-              </p>
-            </div>
-            <div className="max-w-[10rem] xs:max-w-xs">
-              <h1 className="text-zinc-200 font-bold text-3xl font-display">
-                Backend
-              </h1>
-              <p className="text-zinc-400">Java, Python, Spring Boot, Django</p>
-            </div>
           </div>
         </div>
       </section>
