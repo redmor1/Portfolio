@@ -49,8 +49,15 @@ function Project({
   };
   return (
     <>
-      <div className="relative mx-auto bg-zinc-900 max-w-6xl xs:px-16 px-8 lg:py-8 pt-8 overflow-hidden mb-24 rounded-lg h-[40rem] lg:h-auto">
-        <div className="relative z-10 mr-auto xl:max-w-md lg:max-w-sm max-w-sm mb-12 lg:mb-0 text-left text-neutral-50">
+      <div
+        className="mx-auto bg-zinc-900 max-w-6xl mb-24 rounded-lg overflow-hidden
+                      flex flex-col md:relative md:min-h-[450px] lg:min-h-[500px]"
+      >
+        {/* Text Content */}
+        <div
+          className="xs:px-16 px-8 py-8 text-left text-neutral-50 
+                        md:w-1/2 md:max-w-lg lg:max-w-xl md:relative md:z-10"
+        >
           <div className="flex gap-x-4 items-center">
             <a
               href={githubUrl}
@@ -91,9 +98,7 @@ function Project({
               {title}
             </h1>
           )}
-          <p className="mt-4 text-zinc-400 tracking-tight z-10">
-            {description}
-          </p>
+          <p className="mt-4 text-zinc-400 tracking-tight">{description}</p>
           <div className="flex gap-x-4 flex-wrap mt-10 items-center">
             {tags &&
               tags.map((tag) => (
@@ -107,13 +112,23 @@ function Project({
               ))}
           </div>
         </div>
-        <a href={projectUrl}>
-          <img
-            className="z-0 absolute right-0 sm:top-80 md:top-80 lg:top-12 w-[47.5vw] lg:w-[28rem] rounded-xl shadow-[-8.0px_-1.0px_8.0px_rgba(0,0,0,0.38)]"
-            src={imageUrl}
-            alt={title}
-          ></img>
-        </a>
+
+        {/* Image - Mobile: full width below text, Desktop: positioned to right */}
+        <div
+          className="w-full px-8 xs:px-16 pb-8 
+                        md:p-0 md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2 
+                        md:w-[52%] md:h-auto"
+        >
+          <a href={projectUrl} className="block">
+            <img
+              className="w-full h-auto rounded-xl shadow-[-8.0px_-1.0px_8.0px_rgba(0,0,0,0.38)]
+                         md:max-h-[400px] lg:max-h-[450px] xl:max-h-[500px]
+                         object-contain md:ml-auto"
+              src={imageUrl}
+              alt={title}
+            />
+          </a>
+        </div>
       </div>
     </>
   );
