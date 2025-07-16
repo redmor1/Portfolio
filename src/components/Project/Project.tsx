@@ -2,7 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-interface ProjectProps {
+export interface ProjectColors {
+  tagColor?: string;
+  buttonColor?: string;
+  buttonHoverColor?: string;
+  buttonHoverTextColor?: string;
+}
+
+export interface ProjectProps {
   title?: string;
   logo?: React.ReactNode;
   description: string;
@@ -10,6 +17,7 @@ interface ProjectProps {
   githubUrl: string;
   projectUrl: string;
   tags: string[];
+  colors?: ProjectColors;
 }
 
 function Project({
@@ -20,7 +28,25 @@ function Project({
   githubUrl,
   projectUrl,
   tags = [],
+  colors,
 }: ProjectProps) {
+  // Default color scheme - portfolio colors
+  const defaultColors = {
+    tagColor: "rgb(15 118 110)",
+    buttonColor: "rgb(19 78 74)",
+    buttonHoverColor: "rgb(244 244 245)",
+    buttonHoverTextColor: "rgb(19 78 74)",
+  };
+
+  // Fallback to default colors if custom colors are not provided
+  const resolvedColors = {
+    tagColor: colors?.tagColor || defaultColors.tagColor,
+    buttonColor: colors?.buttonColor || defaultColors.buttonColor,
+    buttonHoverColor:
+      colors?.buttonHoverColor || defaultColors.buttonHoverColor,
+    buttonHoverTextColor:
+      colors?.buttonHoverTextColor || defaultColors.buttonHoverTextColor,
+  };
   return (
     <>
       <div className="relative mx-auto bg-zinc-900 max-w-6xl xs:px-16 px-8 lg:py-8 pt-8 overflow-hidden mb-24 rounded-lg h-[40rem] lg:h-auto">
@@ -28,7 +54,14 @@ function Project({
           <div className="flex gap-x-4 items-center">
             <a
               href={githubUrl}
-              className="text-zinc-100 hover:bg-zinc-100 hover:border-zinc-100 hover:text-teal-950 bg-teal-950 border-2 border-teal-950 py-0.5 px-1.5 rounded-xl font-bold underline-offset-2 font-display tracking-wider"
+              style={
+                {
+                  "--btn-bg": resolvedColors.buttonColor,
+                  "--btn-hover-bg": resolvedColors.buttonHoverColor,
+                  "--btn-hover-text": resolvedColors.buttonHoverTextColor,
+                } as React.CSSProperties
+              }
+              className="text-zinc-100 hover:bg-[var(--btn-hover-bg)] hover:border-[var(--btn-hover-bg)] hover:text-[var(--btn-hover-text)] bg-[var(--btn-bg)] border-2 border-[var(--btn-bg)] py-0.5 px-1.5 rounded-xl font-bold underline-offset-2 font-display tracking-wider transition-colors duration-200"
             >
               <FontAwesomeIcon
                 icon={faGithub}
@@ -37,7 +70,14 @@ function Project({
             </a>
             <a
               href={projectUrl}
-              className="text-zinc-100 hover:bg-zinc-100 hover:border-zinc-100 hover:text-teal-950 bg-teal-950 border-2 border-teal-950 py-0.5 px-0.5 rounded-xl  font-bold underline-offset-2 font-display tracking-wider"
+              style={
+                {
+                  "--btn-bg": resolvedColors.buttonColor,
+                  "--btn-hover-bg": resolvedColors.buttonHoverColor,
+                  "--btn-hover-text": resolvedColors.buttonHoverTextColor,
+                } as React.CSSProperties
+              }
+              className="text-zinc-100 hover:bg-[var(--btn-hover-bg)] hover:border-[var(--btn-hover-bg)] hover:text-[var(--btn-hover-text)] bg-[var(--btn-bg)] border-2 border-[var(--btn-bg)] py-0.5 px-0.5 rounded-xl font-bold underline-offset-2 font-display tracking-wider transition-colors duration-200"
             >
               <FontAwesomeIcon
                 icon={faLink}
@@ -57,7 +97,11 @@ function Project({
           <div className="flex gap-x-4 flex-wrap mt-10 items-center">
             {tags &&
               tags.map((tag) => (
-                <h3 className="text-teal-700 text-2xl font-display uppercase tracking-wide">
+                <h3
+                  key={tag}
+                  style={{ color: resolvedColors.tagColor }}
+                  className="text-2xl font-display uppercase tracking-wide"
+                >
                   {tag}
                 </h3>
               ))}

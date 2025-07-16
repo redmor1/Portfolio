@@ -65,6 +65,12 @@ function App() {
             "Prisma",
             "MySQL",
           ]}
+          colors={{
+            tagColor: "#FFA2B2",
+            buttonColor: "#FFA2B2",
+            buttonHoverColor: "#FFFF",
+            buttonHoverTextColor: "#FFA2B2",
+          }}
         />
         <Project
           logo={
@@ -77,6 +83,12 @@ function App() {
           githubUrl="https://github.com/redmor1/eolonotas"
           projectUrl="https://github.com/redmor1/eolonotas"
           tags={["React Native", "Expo Go", "TypeScript", "SQLite"]}
+          colors={{
+            tagColor: "#8E5B9A",
+            buttonColor: "#8E5B9A",
+            buttonHoverColor: "#FFFF",
+            buttonHoverTextColor: "#8E5B9A",
+          }}
         />
       </section>
       <section className="max-w-5xl mx-auto mb-12">
