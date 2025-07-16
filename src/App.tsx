@@ -2,12 +2,9 @@ import "./App.css";
 import Project from "./components/Project/Project";
 import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
-import ProjectReverseTemp from "./components/Project/ProjectReverseTemp";
-
+//  const descriptionFiller =
+//     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ipsum dolor, quod atque, sed illo placeat possimus ipsa sint dignissimos sapiente provident, nostrum veritatis vel laudantium consectetur quaerat distinctio aliquam?";
 function App() {
-  const descriptionFiller =
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ipsum dolor, quod atque, sed illo placeat possimus ipsa sint dignissimos sapiente provident, nostrum veritatis vel laudantium consectetur quaerat distinctio aliquam?";
-
   return (
     <main className="bg-[url('/noise.svg')] font-normal px-4 xs:px-8">
       <p className="text-white font-bold">Website in progress</p>
@@ -106,6 +103,25 @@ function App() {
               concepts — from logic and data structures to how software behaves
               under the hood.
             </p>
+          </div>
+          <div className="items-start flex justify-between max-w-xl w-full">
+            <div className="max-w-[10rem] xs:max-w-xs">
+              <h1 className="text-zinc-200 font-bold text-3xl font-display">
+                Frontend
+              </h1>
+              <p className="text-zinc-400">
+                JavaScript, TypeScript, React, Vite, Bootstrap, Tailwind, React
+                Native
+              </p>
+            </div>
+            <div className="max-w-[10rem] xs:max-w-xs">
+              <h1 className="text-zinc-200 font-bold text-3xl font-display">
+                Backend
+              </h1>
+              <p className="text-zinc-400">
+                Java, Spring Boot, C#, ASP .NET Core, Node.js, Express, MySQL
+              </p>
+            </div>
           </div>
         </div>
       </section>
