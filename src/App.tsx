@@ -2,6 +2,7 @@ import "./App.css";
 import Project from "./components/Project/Project";
 import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
+import AboutMe from "./components/AboutMe";
 //  const descriptionFiller =
 //     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ipsum dolor, quod atque, sed illo placeat possimus ipsa sint dignissimos sapiente provident, nostrum veritatis vel laudantium consectetur quaerat distinctio aliquam?";
 function App() {
@@ -91,52 +92,7 @@ function App() {
           }}
         />
       </section>
-      <section className="max-w-5xl mx-auto mb-12">
-        <h1 className="text-zinc-50 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center my-12 font-display tracking">
-          About me
-        </h1>
-        <div className="flex flex-col items-center justify-between text-zinc-300">
-          <div className="max-w-xl text-lg leading-7 mb-12">
-            <p className="mb-4 border-b-zinc-700 border-b-4 pb-4">
-              Coming from a background where teamwork, clear communication, and
-              performing under pressure were essential, these values naturally
-              carried over into software development. I started programming at
-              the Informatorio bootcamp, a practical introduction that
-              emphasized real-world problem solving. From there, my focus
-              expanded into fullstack development — learning to build, connect,
-              and test everything from frontend interfaces to backend logic,
-              while also exploring UI/UX to understand how it all fits together.
-            </p>
-            <p className="mb-2">
-              Alongside that, staying active in dev communities and learning
-              from more experienced developers has shaped much of my growth as a
-              developer. I'm now close to finishing an associate's degree in
-              programming, which has strengthened my understanding of core
-              concepts — from logic and data structures to how software behaves
-              under the hood.
-            </p>
-          </div>
-          <div className="items-start flex justify-between max-w-xl w-full">
-            <div className="max-w-[10rem] xs:max-w-xs">
-              <h1 className="text-zinc-200 font-bold text-3xl font-display">
-                Frontend
-              </h1>
-              <p className="text-zinc-400">
-                JavaScript, TypeScript, React, Vite, Bootstrap, Tailwind, React
-                Native
-              </p>
-            </div>
-            <div className="max-w-[10rem] xs:max-w-xs">
-              <h1 className="text-zinc-200 font-bold text-3xl font-display">
-                Backend
-              </h1>
-              <p className="text-zinc-400">
-                Java, Spring Boot, C#, ASP .NET Core, Node.js, Express, MySQL
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AboutMe />
       <Contact />
     </main>
   );
