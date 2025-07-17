@@ -5,7 +5,7 @@ import scrollToElement from "../../functions/scrollToElement.ts";
 
 function Navbar() {
   return (
-    <nav className="xs:flex justify-between max-w-6xl mx-auto mb-36 xs:pt-16 pt-8">
+    <nav className="xs:flex justify-between max-w-6xl mx-auto mb-36 xs:pt-16 pt-12">
       <div className="xs:mb-0 mb-6 flex justify-center">
         <a
           href="https://drive.google.com/file/d/1z8CljwaCVsIDgR2FYhYHRr0-kyCFLKpW/view"

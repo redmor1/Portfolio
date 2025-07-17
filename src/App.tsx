@@ -7,8 +7,10 @@ import AboutMe from "./components/AboutMe";
 //     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ipsum dolor, quod atque, sed illo placeat possimus ipsa sint dignissimos sapiente provident, nostrum veritatis vel laudantium consectetur quaerat distinctio aliquam?";
 function App() {
   return (
-    <main className="bg-[url('/noise.svg')] font-normal px-4 xs:px-8">
-      <p className="text-white font-bold">Website in progress</p>
+    <main className="bg-[url('/noise.svg')] font-normal px-4 xs:px-8 relative">
+      <p className="absolute text-white text-center font-display text-xl bg-teal-400/10 w-full border-2 border-teal-400/20 left-0">
+        Website in progress
+      </p>
       <Navbar />
       <section className="mx-auto min-h-[75vh] max-w-6xl mb-24 text-center border-b-4 border-teal-950 py-8">
         <div className="max-w-xl mx-auto">
@@ -16,7 +18,7 @@ function App() {
             Matias Zarate
           </h1>
           <div className="flex items-center justify-center mb-6">
-            <h3 className="text-teal-200 text-xl font-bold mr-4 underline-offset-2 font-display tracking-wider">
+            <h3 className="text-teal-200 text-xl font-bold mr-4 underline-offset-2 font-display tracking-wider whitespace-nowrap">
               Web Developer
             </h3>
             <span className="w-[15.70rem] bg-teal-200 inline-block h-1 align-middle"></span>
