@@ -1,0 +1,133 @@
+---
+import GitHubLogo from "./icons/GitHubLogo.astro";
+import LinkIcon from "./icons/LinkIcon.astro";
+import { Picture } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+export interface ProjectColors {
+  tagColor?: string;
+  buttonColor?: string;
+  buttonHoverColor?: string;
+  buttonHoverTextColor?: string;
+}
+
+export interface Props {
+  title?: string;
+  description: string;
+  image: ImageMetadata;
+  githubUrl: string;
+  projectUrl: string;
+  tags?: string[];
+  colors?: ProjectColors;
+}
+
+const {
+  title,
+  description,
+  image,
+  githubUrl,
+  projectUrl,
+  tags = [],
+  colors,
+} = Astro.props;
+
+// Default color scheme - portfolio colors
+const defaultColors = {
+  tagColor: "rgb(15 118 110)",
+  buttonColor: "rgb(19 78 74)",
+  buttonHoverColor: "rgb(244 244 245)",
+  buttonHoverTextColor: "rgb(19 78 74)",
+};
+
+// Fallback to default colors if custom colors are not provided
+const resolvedColors = {
+  tagColor: colors?.tagColor || defaultColors.tagColor,
+  buttonColor: colors?.buttonColor || defaultColors.buttonColor,
+  buttonHoverColor: colors?.buttonHoverColor || defaultColors.buttonHoverColor,
+  buttonHoverTextColor:
+    colors?.buttonHoverTextColor || defaultColors.buttonHoverTextColor,
+};
+---
+
+<div
+  class="mx-auto bg-zinc-900 max-w-6xl mb-24 rounded-lg overflow-hidden
+                flex flex-col md:relative md:min-h-112.5 lg:min-h-125"
+>
+  {/* Text Content */}
+  <div
+    class="xs:px-16 px-8 py-8 text-left text-neutral-50
+                  md:w-1/2 md:max-w-lg lg:max-w-xl md:relative md:z-10"
+  >
+    <div class="flex gap-x-4 items-center">
+      <a
+        href={githubUrl}
+        aria-label="Visit the project's GitHub repository"
+        style={`--btn-bg: ${resolvedColors.buttonColor}; --btn-hover-bg: ${resolvedColors.buttonHoverColor}; --btn-hover-text: ${resolvedColors.buttonHoverTextColor};`}
+        class="text-zinc-100 hover:bg-(--btn-hover-bg) hover:border-(--btn-hover-bg) hover:text-(--btn-hover-text) bg-(--btn-bg) border-2 border-(--btn-bg) py-0.5 px-1.5 rounded-xl font-bold underline-offset-2 font-display tracking-wider transition-colors duration-200"
+      >
+        <GitHubLogo />
+      </a>
+      <a
+        href={projectUrl}
+        aria-label="Visit the project's live demo"
+        style={`--btn-bg: ${resolvedColors.buttonColor}; --btn-hover-bg: ${resolvedColors.buttonHoverColor}; --btn-hover-text: ${resolvedColors.buttonHoverTextColor};`}
+        class="text-zinc-100 hover:bg-(--btn-hover-bg) hover:border-(--btn-hover-bg) hover:text-(--btn-hover-text) bg-(--btn-bg) border-2 border-(--btn-bg) py-0.5 px-0.5 rounded-xl font-bold underline-offset-2 font-display tracking-wider transition-colors duration-200"
+      >
+        <LinkIcon />
+      </a>
+    </div>
+
+    {
+      Astro.slots.has("logo") && (
+        <div class="mb-4 mx-auto">
+          <slot name="logo" />
+        </div>
+      )
+    }
+
+    {
+      title && (
+        <h1 class="text-5xl xs:text-6xl mb-4 mt-10 font-extrabold tracking-wide text-neutral-50 mx-auto">
+          {title}
+        </h1>
+      )
+    }
+    <p class="mt-4 text-zinc-400 tracking-tight">{description}</p>
+    <div class="flex gap-x-4 flex-wrap mt-10 items-center">
+      {
+        tags &&
+          tags.map((tag) => (
+            <h3
+              style={`color: ${resolvedColors.tagColor};`}
+              class="text-2xl font-display uppercase tracking-wide"
+            >
+              {tag}
+            </h3>
+          ))
+      }
+    </div>
+  </div>
+
+  {/* Image - Mobile: full width below text, Desktop: positioned to right */}
+  <div
+    class="w-full px-8 xs:px-16 pb-8
+                  md:p-0 md:absolute md:right-0 md:top-1/2 md:transform md:-translate-y-1/2
+                  md:w-[52%] md:h-auto"
+  >
+    <a href={projectUrl} class="block">
+      <Picture
+        src={image}
+        widths={[480, 800, 1280]}
+        sizes="(min-width: 1024px) 33vw,
+        (min-width: 768px) 50vw,
+        100vw"
+        formats={["avif", "webp"]}
+        fallbackFormat="webp"
+        alt={title || "Project image"}
+        class="w-full h-auto rounded-xl shadow-[-8.0px_-1.0px_8.0px_rgba(0,0,0,0.38)]
+                   md:max-h-100 lg:max-h-112.5 xl:max-h-125
+                   object-contain md:ml-auto"
+      />
+    </a>
+  </div>
+</div>
