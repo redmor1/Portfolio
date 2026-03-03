@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import "@fontsource/lato";
+@import "@fontsource/staatliches";
+
+@theme {
+  --breakpoint-xs: 480px;
+  --font-display: "Staatliches", sans-serif;
+  --font-body: "Lato", sans-serif;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: radial-gradient(
+    circle at 50% -35%,
+    #398461 0%,
+    hsl(240, 10%, 5%) 47%
+  );
+  background-color: hsl(240, 10%, 5%);
+  background-clip: content-box, border-box;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
