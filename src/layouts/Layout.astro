@@ -1,7 +1,7 @@
 ---
 import Navbar from "@/components/Navbar.astro";
 import "@/styles/global.css";
-
+import fontStaatlichesUrl from "@fontsource/staatliches/files/staatliches-latin-400-normal.woff2?url";
 interface Props {
   title?: string;
   description?: string;
@@ -47,6 +47,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+    <!-- Font preload -->
+    <link
+      rel="preload"
+      href={fontStaatlichesUrl}
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <main
