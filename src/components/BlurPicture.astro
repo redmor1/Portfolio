@@ -1,0 +1,57 @@
+---
+// src/components/BlurPicture.astro
+import { Picture, getImage } from "astro:assets";
+import type { ComponentProps } from "astro/types";
+
+type Props = ComponentProps<typeof Picture> & {
+  placeholder?: boolean;
+};
+
+const {
+  src,
+  alt,
+  placeholder = false,
+  class: className = "",
+  ...props
+} = Astro.props;
+
+let placeholderUrl = "";
+
+if (placeholder) {
+  const lowResImage = await getImage({
+    src,
+    width: 120,
+    format: "webp",
+    quality: 75,
+  });
+  placeholderUrl = lowResImage.src;
+}
+---
+
+<div style="display: grid;">
+  {/* Placeholder */}
+  {
+    placeholder && (
+      <img
+        src={placeholderUrl}
+        alt=""
+        aria-hidden="true"
+        class={`col-start-1 row-start-1 transition-opacity duration-200 ease-in-out ${className}`}
+        style="filter: blur(20px); transform: scale(1); z-index: 1;"
+      />
+    )
+  }
+
+  {/* Real picture */}
+  <Picture
+    src={src as any}
+    alt={alt}
+    {...props as any}
+    pictureAttributes={{ style: "display: contents;" }}
+    class={`col-start-1 row-start-1 transition-opacity duration-200 ease-in-out ${placeholder ? "opacity-0" : ""} ${className}`}
+    style="z-index: 2;"
+    onload={placeholder
+      ? "this.parentElement.previousElementSibling && (this.parentElement.previousElementSibling.style.opacity = '0'); this.style.opacity='1';"
+      : undefined}
+  />
+</div>
