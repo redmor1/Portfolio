@@ -3,6 +3,8 @@ import AboutMe from "@/components/AboutMe.astro";
 import Contact from "@/components/Contact.astro";
 import Project from "@/components/Project.astro";
 import Layout from "@/layouts/Layout.astro";
+import cabalgataLogo from "@/assets/cabalgata/cabalgata-logo.svg";
+import cabalgataPhoto from "@/assets/cabalgata/cabalgata.png";
 import sentirsebienLogo from "@/assets/sentirse-bien/sentirse-bien-logo.svg";
 import sentirsebienPhoto from "@/assets/sentirse-bien/sentirse-bien.png";
 import eolonotasLogo from "@/assets/eolonotas/eolonotas-logo.svg";
@@ -40,7 +42,7 @@ import lafronteraPhoto from "@/assets/la-frontera/la-frontera.png";
         I've got a solid foundation in building maintainable interfaces,
         reusable components, and responsive layouts using modern frontend tools.
         I value teamwork, clear communication, and keeping projects moving
-        through practical, hands-on development.
+        through practical, hands-on development. Hit me up!
       </p>
     </div>
   </section>
@@ -50,6 +52,29 @@ import lafronteraPhoto from "@/assets/la-frontera/la-frontera.png";
     >
       Projects
     </h1>
+    <Project
+      description={"NON-OFFICIAL - Simple landing page for a local soda brand. Made for practice."}
+      image={cabalgataPhoto}
+      githubUrl="https://github.com/redmor1/cabalgata"
+      projectUrl="https://cabalgata-five.vercel.app/"
+      tags={["Astro", "JavaScript", "Tailwind", "Vite"]}
+      colors={{
+        tagColor: "#db1414",
+        buttonColor: "#db1414",
+        buttonHoverColor: "#FFFF",
+        buttonHoverTextColor: "#db1414",
+      }}
+      showOverlay={true}
+      overlayText="WORK IN PROGRESS"
+    >
+      <img
+        slot="logo"
+        src={cabalgataLogo.src}
+        class="h-36 mt-2"
+        alt="logo"
+      /></Project
+    >
+
     <Project
       description={"Landing page for a football field. Made with Astro for ultra fast performance and SEO."}
       image={lafronteraPhoto}
@@ -86,6 +111,8 @@ import lafronteraPhoto from "@/assets/la-frontera/la-frontera.png";
         buttonHoverColor: "#FFFF",
         buttonHoverTextColor: "#FFA2B2",
       }}
+      showOverlay={true}
+      overlayText="NEEDS REFACTORING"
     >
       <img
         slot="logo"

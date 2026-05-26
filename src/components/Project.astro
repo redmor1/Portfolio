@@ -19,6 +19,8 @@ export interface Props {
   projectUrl: string;
   tags?: string[];
   colors?: ProjectColors;
+  showOverlay?: boolean;
+  overlayText?: string;
 }
 
 const {
@@ -29,6 +31,8 @@ const {
   projectUrl,
   tags = [],
   colors,
+  showOverlay = false,
+  overlayText = "UNDER CONSTRUCTION",
 } = Astro.props;
 
 // Default color scheme - portfolio colors
@@ -50,9 +54,24 @@ const resolvedColors = {
 ---
 
 <div
-  class="mx-auto bg-zinc-900 max-w-6xl mb-24 rounded-lg overflow-hidden
-                flex flex-col md:relative md:min-h-112.5 lg:min-h-125"
+  class="relative mx-auto bg-zinc-900 max-w-6xl mb-24 rounded-lg overflow-hidden
+                flex flex-col md:min-h-112.5 lg:min-h-125 project-card-container"
 >
+  {
+    showOverlay && (
+      <div class="absolute inset-0 z-50 pointer-events-none overflow-hidden flex items-center justify-center">
+        <div
+          class="project-overlay-text absolute backdrop-blur-sm text-zinc-900 font-bold text-2xl md:text-4xl uppercase w-[200%] text-center py-2 shadow-2xl transition-transform duration-75"
+          style="background-image: repeating-linear-gradient(45deg, #fcd34d 0, #fcd34d 40px, #3f3f46 40px, #3f3f46 80px);"
+        >
+          <span class="bg-yellow-300 text-zinc-900 px-8 rounded-md border-2 border-[#3f3f46]">
+            {overlayText}
+          </span>
+        </div>
+      </div>
+    )
+  }
+
   {/* Text Content */}
   <div
     class="xs:px-16 px-8 py-8 text-left text-neutral-50
@@ -131,3 +150,25 @@ const resolvedColors = {
     </a>
   </div>
 </div>
+
+<script>
+  function updateOverlayAngles() {
+    const containers = document.querySelectorAll(".project-card-container");
+    containers.forEach((container) => {
+      const overlay = container.querySelector(".project-overlay-text");
+      if (overlay && overlay instanceof HTMLElement) {
+        const rect = container.getBoundingClientRect();
+        // Calculate the exact angle between the top-left and bottom-right corners
+        const angle = Math.atan2(rect.height, rect.width) * (180 / Math.PI);
+        overlay.style.transform = `rotate(-${angle}deg)`;
+      }
+    });
+  }
+
+  // Run on mount and when resizing
+  document.addEventListener("DOMContentLoaded", updateOverlayAngles);
+  window.addEventListener("resize", updateOverlayAngles);
+
+  // Failsafe for fast rendering frameworks like Astro
+  updateOverlayAngles();
+</script>
