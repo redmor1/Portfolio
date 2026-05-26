@@ -60,11 +60,11 @@ const resolvedColors = {
   {
     showOverlay && (
       <div class="project-overlay-wrapper absolute inset-0 z-50 pointer-events-none overflow-hidden flex items-center justify-center transition-opacity duration-500 lg:group-hover:opacity-15">
-        <div class="project-overlay-text absolute bg-[#fcd34d] font-black text-xl md:text-3xl uppercase w-[120%] shadow-2xl text-[#09090b] -rotate-[10deg]">
+        <div class="project-overlay-text absolute bg-teal-400/10 border-y-2 border-teal-400/20 font-display font-black text-xl md:text-3xl uppercase w-[120%] shadow-2xl text-white -rotate-[10deg]">
           {/* Top slanted stripes border */}
           <div
             class="w-full h-2 md:h-3"
-            style="background-image: repeating-linear-gradient(45deg, #09090b 0, #09090b 15px, transparent 15px, transparent 30px);"
+            style="background-image: repeating-linear-gradient(45deg, rgba(45, 212, 191, 0.2) 0, rgba(45, 212, 191, 0.2) 15px, transparent 15px, transparent 30px);"
           />
 
           {/* Repeating Text Center */}
@@ -77,7 +77,7 @@ const resolvedColors = {
           {/* Bottom slanted stripes border */}
           <div
             class="w-full h-2 md:h-3"
-            style="background-image: repeating-linear-gradient(45deg, #09090b 0, #09090b 15px, transparent 15px, transparent 30px);"
+            style="background-image: repeating-linear-gradient(45deg, rgba(45, 212, 191, 0.2) 0, rgba(45, 212, 191, 0.2) 15px, transparent 15px, transparent 30px);"
           />
         </div>
       </div>
@@ -185,8 +185,8 @@ const resolvedColors = {
         });
       },
       {
-        // Trigger when the tape intersects the middle 38% of the viewport
-        rootMargin: "-38% 0px -38% 0px",
+        // Trigger when the tape intersects the middle 30% of the viewport
+        rootMargin: "-50% 0px -50% 0px",
       },
     );
 
