@@ -3,6 +3,8 @@ import AboutMe from "@/components/AboutMe.astro";
 import Contact from "@/components/Contact.astro";
 import Project from "@/components/Project.astro";
 import Layout from "@/layouts/Layout.astro";
+import analyzeyourslopLogo from "@/assets/analyze-your-slop/analyzeyourslop-logo.webp";
+import analyzeyourslopPhoto from "@/assets/analyze-your-slop/analyzeyourslop.png";
 import cabalgataLogo from "@/assets/cabalgata/cabalgata-logo.svg";
 import cabalgataPhoto from "@/assets/cabalgata/cabalgata.png";
 import sentirsebienLogo from "@/assets/sentirse-bien/sentirse-bien-logo.svg";
@@ -15,7 +17,7 @@ import lafronteraPhoto from "@/assets/la-frontera/la-frontera.png";
 
 <Layout>
   <section
-    class="mx-auto min-h-[75vh] max-w-6xl mb-24 text-center border-b-4 border-teal-950 py-8"
+    class="mx-auto min-h-[75vh] max-w-6xl mb-24 text-center border-teal-800 pt-8"
   >
     <div class="max-w-xl mx-auto">
       <h1
@@ -39,19 +41,40 @@ import lafronteraPhoto from "@/assets/la-frontera/la-frontera.png";
         Frontend-focused fullstack developer from Argentina
       </h1>
       <p class="text-zinc-400 mb-8 mt-4 text-md font-normal">
-        I've got a solid foundation in building maintainable interfaces,
-        reusable components, and responsive layouts using modern frontend tools.
-        I value teamwork, clear communication, and keeping projects moving
-        through practical, hands-on development. Hit me up!
+        I enjoy building sleek, optimized and performant websites. I value
+        teamwork, clear communication, and keeping projects moving through
+        practical, hands-on development. Hit me up!
       </p>
     </div>
   </section>
-  <section id="projects" class="border-b-4 border-teal-950 max-w-6xl mx-auto">
+  <section id="projects" class="border-b-4 border-teal-800 max-w-6xl mx-auto">
     <h1
-      class="font-display text-zinc-50 text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center mb-24"
+      class="font-display text-zinc-50 text-4xl sm:text-5xl md:text-6xl underline decoration-teal-200 lg:text-7xl text-center mb-24"
     >
       Projects
     </h1>
+    <Project
+      description={"Website analyzer to find vulnerabilities using tools like retire.js, Observatory, WappalyzerGo and more. Currently hosted on a VPS running nginx, running Dockerized containers for each scan. Closed off until i implement Redis + BullMQ for rate-limiting and concurrency so the VPS doesn't blow up."}
+      image={analyzeyourslopPhoto}
+      githubUrl="https://github.com/redmor1/website-analyzer"
+      projectUrl="https://redmor1.github.io/website-analyzer/"
+      tags={["Astro", "TypeScript", "Tailwind", "React", "Docker", "Express"]}
+      colors={{
+        tagColor: "#ff8934",
+        buttonColor: "#ff8934",
+        buttonHoverColor: "#FFFF",
+        buttonHoverTextColor: "#ff8934",
+      }}
+      showOverlay={true}
+      overlayText="WORK IN PROGRESS"
+    >
+      <img
+        slot="logo"
+        src={analyzeyourslopLogo.src}
+        class="h-auto w-64 mt-4 shrink-0"
+        alt="logo"
+      />
+    </Project>
     <Project
       description={"NON-OFFICIAL - Simple landing page for a local soda brand. Made for practice."}
       image={cabalgataPhoto}
